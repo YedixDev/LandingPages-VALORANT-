@@ -1,0 +1,79 @@
+@import url('https://fonts.cdnfonts.com/css/valorant');
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Oswald:wght@700&family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.container-news {
+   width: 100%;
+   height: 500px;
+   height: auto;
+   background-color: #ece8e3;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.news-header {
+   padding: 20px 40px;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+}
+
+.slider {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative; 
+}
+
+.container-card {
+   display: flex; 
+   overflow: hidden; 
+   width: 75%; 
+   gap: 50px;
+}
+
+.card {
+   width: 50%; 
+   height: 350px;
+   display: flex;
+   flex-direction: column;
+   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+   border-radius: 8px;
+   overflow: hidden;
+   margin: 20px; 
+}
+
+.img-card {
+   width: 100%;
+   height: auto;
+}
+
+.card-description {
+   padding: 10px;
+}
+
+.card-link {
+   font-weight: bold;
+   color: #333;
+}
+
+.nav-button {
+   background-color: #ff283a;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   padding: 10px;
+   cursor: pointer;
+   z-index: 1; /* Asegúrate de que los botones estén encima del contenido */
+   margin: 0 10px; /* Espaciado entre el botón y las cartas */
+}

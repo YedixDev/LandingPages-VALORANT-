@@ -8,9 +8,9 @@ const Header = () => {
         <SiValorant />
       </div>
       <div className="nav">
-        <a href="/src/App.js">Home</a>
-        <a href="#">News</a>
-        <a href="#">New Agent</a>
+        <a href="#welcome">Home</a>
+        <a href="#new-agent">New Agent</a>
+        <a href="#news">News</a>
         <a href="#">This is Valorant</a>
       </div>
 
