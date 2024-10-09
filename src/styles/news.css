@@ -3,77 +3,183 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Oswald:wght@700&family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-
-
-*{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container-news {
-   width: 100%;
-   height: 500px;
-   height: auto;
-   background-color: #ece8e3;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+  width: 100%;
+  background-color: #ece8e3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .news-header {
-   padding: 20px 40px;
-   width: 100%;
-   display: flex;
-   justify-content: space-between;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
 }
 
-.slider {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: relative; 
+.header-title-1 {
+  font-size: 42px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.header-title-2 a {
+  font-size: 24px;
+  font-family: "Afacad Flux", sans-serif;
+  text-decoration: none;
+  color: #001;
+}
+
+.header-title-2 a:hover {
+  color: #ff283a;
+  transition: color 0.3s; 
 }
 
 .container-card {
-   display: flex; 
-   overflow: hidden; 
-   width: 75%; 
-   gap: 50px;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  gap: 20px; 
 }
 
 .card {
-   width: 50%; 
-   height: 350px;
-   display: flex;
-   flex-direction: column;
-   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
-   border-radius: 8px;
-   overflow: hidden;
-   margin: 20px; 
+  width: 80%;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s; 
+  margin: 20px;
+}
+
+.card:hover {
+  transform: translateY(-5px); 
 }
 
 .img-card {
-   width: 100%;
-   height: auto;
+  width:100%;
+  height: auto;
 }
 
 .card-description {
-   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  gap: 5px;
+}
+
+.card-span {
+  color: #ff283a;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Afacad Flux", sans-serif;
+  font-size: 14px;
 }
 
 .card-link {
-   font-weight: bold;
-   color: #333;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.card-link:hover {
+  text-decoration: underline; 
+}
+
+.card-sub {
+  color: #555;
+  font-size: 14px; 
 }
 
 .nav-button {
-   background-color: #ff283a;
-   color: white;
-   border: none;
-   border-radius: 5px;
-   padding: 10px;
-   cursor: pointer;
-   z-index: 1; /* Asegúrate de que los botones estén encima del contenido */
-   margin: 0 10px; /* Espaciado entre el botón y las cartas */
+  background-color: #ff283a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+  margin: 0 20px; 
+  transition: background-color 0.3s; 
 }
+
+.nav-button:hover {
+  background-color: #d92030;
+}
+
+
+/* Para pantallas pequeñas: móviles y tablets (hasta 1024px de ancho) */
+@media (max-width: 1024px) {
+   .news-header {
+     flex-direction: column;
+     align-items: center;
+     padding: 20px 10px; /* Ajustamos el padding */
+     text-align: center;
+   }
+ 
+   .header-title-1 {
+     font-size: 28px;
+     text-align: center;
+   }
+ 
+   .header-title-2 {
+     margin-top: 10px;
+   }
+ 
+   .header-title-2 a {
+     font-size: 20px;
+     text-align: center;
+   }
+ 
+   .container-card {
+     flex-direction: column;
+     align-items: center; /* Centra las cartas */
+     gap: 20px; /* Espacio entre las cartas */
+     width: 100%; /* Aseguramos que ocupe todo el ancho */
+     padding: 0 10px; /* Añadimos un pequeño padding */
+   }
+ 
+   .card {
+     width: 90%; /* Ocupa casi todo el ancho en móviles */
+     height: auto; /* Ajusta la altura automáticamente */
+     margin: 10px 0; /* Espaciado entre las cartas */
+   }
+ 
+   .card-description {
+     text-align: center; /* Texto centrado dentro de la carta */
+     padding: 15px;
+   }
+ 
+   .card-link {
+     font-size: 20px;
+     text-align: center; /* Aseguramos que los links queden centrados */
+   }
+ 
+   .card-sub {
+     font-size: 16px;
+     text-align: center; /* El subtítulo centrado también */
+   }
+ 
+   .nav-button {
+     display: block;
+     width: 80%; /* Ancho más amplio para pantallas pequeñas */
+     margin: 20px auto; /* Centra el botón horizontalmente */
+     text-align: center;
+   }
+ }
+ 
