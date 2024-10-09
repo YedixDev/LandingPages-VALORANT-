@@ -3,6 +3,8 @@ import "./App.css";
 import Header from "./pages/Header";
 import Agents from "./components/Agents";
 import Section from "./pages/Section";
+import NewAgent from "./pages/NewAgent";
+import News from "./pages/News";
 
 function App() {
   const [agents, setAgents] = useState(null);
@@ -20,6 +22,8 @@ function App() {
       </div>
       <div className="container">
         <Section />
+        <NewAgent />
+        <News />
         <h1 className="title">Agentes de Valorant</h1>
         {agents ? (
           <Agents agents={agents} />
